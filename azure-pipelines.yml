@@ -16,6 +16,7 @@ steps:
     azureResourceManagerConnection: 'STG'
     subscriptionId: 'f1eb856e-d060-45c8-957b-bb6ed6516d84'
     action: 'Create Or Update Resource Group'
+    resourceGroupName: 'APIM-POC'
     location: 'West US'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
