@@ -13,13 +13,12 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'APIM-POC-STG'
+    azureResourceManagerConnection: 'STG'
     subscriptionId: 'f1eb856e-d060-45c8-957b-bb6ed6516d84'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'APIM-POC'
     location: 'West US'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName APIM-POC -linkedTemplateUri https://raw.githubusercontent.com/HowlinSammy/MattK-APIM/master/CreateWebApp/linkedStorageAccount.json'
+    overrideParameters: '-projectName apimpoc -linkedTemplateUri https://raw.githubusercontent.com/HowlinSammy/MattK-APIM/master/CreateWebApp/linkedStorageAccount.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
